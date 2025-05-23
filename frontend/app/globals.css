@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.swiper-pagination-bullet {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 2px !important;
+    border-radius: 2px;
+    background-color: #6f7375;
+    opacity: 0.5;
+  }
+.swiper-pagination-bullet-active {
+    width: 50px; 
+    opacity: 1;
+  }
+
+/* Add space, adjust opacity, and remove underline from links */
+.subheading-anchor {
+  opacity: 0; /* start as invisible */
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none; /* remove underline */
+  margin-left: 0.25rem; /* space between the heading and the hashtag */
+}
+
+/* Control visibility and opacity on hover/focus */
+.subheading-anchor:focus, :hover > .subheading-anchor {
+  opacity: 0.75; /* visible and more opaque, but not fully opaque */
+}
+
+/* Style links to inherit color and no underline */
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* Rounded corners for links and summary elements */
+a, summary {
+  border-radius: 0.25rem;
+}
+
